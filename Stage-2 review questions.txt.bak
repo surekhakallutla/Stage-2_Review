@@ -141,10 +141,12 @@ echo "cnt4=$cnt4";
 echo "cnt5=$cnt5";
 echo "cnt6=$cnt6";
 
-declare -a dicecnt
-
-	dicecnt=($cnt1 $cnt2 $cnt3 $cnt4 $cnt5 $cnt6);
+cnt=0;
+for ((cnt=0;cnt<6;cnt++))
+do
+	dicecnt[$cnt]=($cnt1 $cnt2 $cnt3 $cnt4 $cnt5 $cnt6);
 	echo "dice count is ${dicecnt[$cnt]}";
+done
 
 largest=${dicecnt[0]}
 smallest=${dicecnt[0]}

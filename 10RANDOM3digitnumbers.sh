@@ -2,17 +2,24 @@
 
 declare -a randomArray
 echo "Adding element to array "
-nums=()
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)));
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
-nums+=($(((RANDOM%90)+100)))
+
+for ((cnt=0;cnt<10;cnt++))
+do
+	nums[$cnt]=$((RANDOM%900 +100))
+done
+echo " The Array is "${nums[@]};
+
+#nums=()
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)));
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
+#nums+=($(((RANDOM%900)+100)))
 
 echo "Here are the array elements: ${nums[@]}"
 
